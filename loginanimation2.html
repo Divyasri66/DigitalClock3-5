@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: black;
+        }
+        #glowcolorEffect{
+            width: 400px;
+            margin-top: 10%;
+            margin-left: 30%;
+            height: 350px;
+            background-image: linear-gradient(90deg red ,purple,plum,darkblue,plum,purple,red);
+            background-size: 800%;
+            background-position: 800%;
+            filter: blur(100px);
+            animation-name:colorChange;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes colorChange{
+            from{
+                background-position:800%;
+            }
+            to{
+               background-position: 0%; 
+            }
+        }
+        #login{
+           width: 500px;
+           height: 400px;
+           background-color: rgba(173,173,173,0.635);
+           position: absolute;
+           left:25%;
+           top:15%;
+           border-radius:10px ;
+           box-shadow: 5px 5px 5px black;
+        }
+        h1{
+            position: relative;
+            text-align: center;
+            top: 40px;
+            font-size: 40px;
+            color: white;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 5px black;
+
+        }
+        .a,#button{
+            width:80%;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            font-size:20px;
+            position: relative;
+            top: 20%;
+            left: 10%;
+            padding-left: 5px;
+            box-shadow: 5px 5px 5px black;
+        }
+        #button{
+            width: 60%;
+            top: 20%;
+            height: 40px;
+            left: 20%;
+            font-weight: bold;
+            letter-spacing: 5px;
+            color: white;
+            background-color: navy;
+        }
+    </style>
+</head>
+<body>
+    <div id="glowColorEffect"></div>
+    <div id="login">
+        <h1>Login</h1>
+        <input class="a" placeholder="Enter the email" type="email">
+        <br><br>
+        <input class="a" placeholder="Enter the password" type="password">
+        <br><br>
+        <input id="button" type="submit" value="login">
+    </div>
+</body>
+</html>
